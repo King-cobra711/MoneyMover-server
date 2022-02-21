@@ -21,7 +21,7 @@ let balanceA = 1000;
 let balanceB = 1000;
 // Routes
 
-app.get("/balances", (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).send({
     Abalance: balanceA,
     Bbalance: balanceB,
