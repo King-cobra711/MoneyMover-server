@@ -17,18 +17,6 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.enable("trust proxy", true);
 
-// Heroku
-if (process.env.NODE_ENV == "production") {
-  app.use(express.static("build"));
-  app.get(
-    "*",
-    (req,
-    (res) => {
-      req.sendFile(path.resolve(__dirname, "build", "index.html"));
-    })
-  );
-}
-
 let balanceA = 1000;
 let balanceB = 1000;
 // Routes
