@@ -7,10 +7,7 @@ const app = express();
 
 app.use(
   Cors({
-    origin: [
-      "http://localhost:3000",
-      "https://money-mover-server.herokuapp.com",
-    ],
+    origin: ["http://localhost:3000", "https://king-cobra711.github.io"],
     credentials: true,
     allowedHeaders: ["Origin", "Content-Type", "Authorization"],
   })
